@@ -1,13 +1,31 @@
 .library-course {
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    background-color: cornflowerblue;
+    
 
-    &__title {
+    &__title-check {
         grid-row: 1/2; 
+        display: flex;
+        position: relative;
     }
 
     &__description {
         grid-row: 2/3;
     }
+
+    &__arrow {
+        grid-row: 1/2;
+        position: absolute;
+        margin-left: 64%;
+        margin-top: 1%;
+       
+    }
+    &__action {
+        grid-row: 1/2;
+        position: absolute;
+        margin-left: 66%;
+    }
+    
 }

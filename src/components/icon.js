@@ -7,4 +7,4 @@ const Icon = (icon, className) => {
        
     )
 }
-export default Icon
+export default Icon;
