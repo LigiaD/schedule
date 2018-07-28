@@ -1,8 +1,8 @@
 .action {
     background-color: black;
-    font-size: 16px;
-    height: 32px;
-    width: 32px;
+    font-size: 12px;
+    height: 23px;
+    width: 23px;
     border-radius: 16px;
     
    
@@ -17,6 +17,8 @@
         margin-left: 50%;
         margin-top: 50%;
         transform: translate(-50%, -50%);
+
+        transition: all .3s ease;
         
 
     }
@@ -25,8 +27,16 @@
         width: 0.2em;
     }
     &:after {
-        margin-top: -16px;
+        margin-top: -12px;
         height: 0.2em;
         width: 1em;
+    }
+}
+.action-remove{
+    &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+        transform: translate(-50%, -50%) rotate(-135deg);
     }
 }
