@@ -2,7 +2,7 @@ import { FETCH_COURSES, TOGGLE_ENROLED } from './types';
 
 export function toggleEnrolled(id) {
     return {
-        type:TOGGLE_ENROLED ,
+        type: TOGGLE_ENROLED,
         payload: id
     }
 }
