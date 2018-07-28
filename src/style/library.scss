@@ -1,4 +1,4 @@
-
+@import 'variables';
 .library {
     grid-column: library-s/library-e;
     display: grid;
@@ -10,11 +10,11 @@
     margin-right: -50px;
 
     &__title {
-       color:#487BCE;
+       color: $color-blue;
        font-family: 'Alegreya';
        font-size: 34px;
        font-weight: bold;
-       border-left: 2px solid #487BCE ;
+       border-left: 2px solid $color-blue ;
        padding: 20px 40px;
     }
 
