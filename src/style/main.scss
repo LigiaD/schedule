@@ -3,6 +3,7 @@
 @import 'libraryCourse';
 @import 'scheduleCourse';
 @import 'schedule';
+@import 'progressTracker';
 
 
 
@@ -16,6 +17,7 @@ $color-two: #32CBE8;
     display: grid;
     grid-template-columns: [library-s] 1fr 1fr[library-e schedule-s] 1fr [schedule-e];
     grid-template-rows: 1fr;
+    font-size: 12px;
 }
 
 .schedule {
