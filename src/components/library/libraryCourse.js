@@ -22,7 +22,7 @@ class LibraryCourse extends Component {
    
 
     handleCallback = function(status) {
-       let height = this.state.height == 0 ? 80 : 0;
+       let height = this.state.height == 0 ? 'auto' : 0;
         if(!status) {
             document.getElementById(this.id).classList.add('library-course-selected')
            
@@ -34,7 +34,7 @@ class LibraryCourse extends Component {
     }.bind(this);
 
     render() {
-        this.id = `library-course-${this.props.id}`
+        this.id = `library-course-${this.props.id}`;
         
         return (
             <div id={this.id} className="library-course">
@@ -44,7 +44,7 @@ class LibraryCourse extends Component {
                 </div>
                 <div className="library-course__line"></div>
                 <Arrow callback={status =>this.handleCallback(status) } id={this.props.id} className="library-course__arrow" />
-                <Action id={this.props.id}  status={this.state.status}  onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
+                <Action id={this.props.id} onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
              <AnimateHeight
                 duration={300}
                 height={this.state.height}
