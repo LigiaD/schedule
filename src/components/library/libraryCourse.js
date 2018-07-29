@@ -51,9 +51,21 @@ class LibraryCourse extends Component {
               onClick={() => this.props.toggleEnrolled(this.props.id)}
               className={`library-course__action ${this.props.enrolled ? 'action-remove' : ''}`}
             />
-            </div>
-        )
+            <AnimateHeight
+              duration={300}
+              height={this.state.height}
+            >
+            <div className="libarary-course__line"></div>
+              <div className="library-course__description">
+                <label>Course Description</label>
+                <p>{this.props.description}</p>
+              </div>
+            </AnimateHeight>
+          </div>
+        );
+      }
     }
-}
+    
+
 
 export default connect(null, actions)(LibraryCourse);

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ProgressTracker extends Component {
 
     calculateProgress = function() {
-        return (this.props.amountEnrolled / this.props.amountPossibe) * 100;
+        return (this.props.amountEnrolled / this.props.amountPossible) * 100;
     }.bind(this);
 
     render() {
@@ -19,3 +19,4 @@ class ProgressTracker extends Component {
 }
 
 export default ProgressTracker;
+
