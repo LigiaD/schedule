@@ -4,6 +4,7 @@ class Arrow extends Component {
 
     constructor(props) {
         super(props)
+        
         this.state = {
             status: false
         }

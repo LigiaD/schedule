@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import Icon from './icon';
+
 
 class Action extends Component {
+
     constructor(props) {
         super(props)
+
         this.status = false;
     }
 
     handleAction = function() {
         this.props.onClick()
-        if(!this.status){
+        if(!this.status) {
             document.getElementById(this.id).classList.add('action-remove');
         } else {
             document.getElementById(this.id).classList.remove('action-remove');
@@ -23,11 +25,10 @@ class Action extends Component {
         <a 
         id={this.id}
         onClick={() => this.handleAction()} 
-        className={` ${this.props.className} action`}>
+        className={`${this.props.className} action`}>
         
-   
         </a>
-    )
+        )
         
     }
 }

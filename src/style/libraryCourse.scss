@@ -52,7 +52,7 @@
     .library-course {
         padding: 15px 25px;
         &:hover {
-            @include solid-course;
+            @include solid-course();
             .library-course__action {
                 opacity: 1;
             }
