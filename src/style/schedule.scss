@@ -1,27 +1,29 @@
 @import 'variables';
 
 .schedule {
-    grid-row: 1/-1;
     grid-column: schedule-s/schedule-e;
+    grid-row: 1/-1;
     position: relative;
     height: 100%;
     width: 100%;
-    
+
     display: grid;
-    grid-template-rows: [space-one-e] 1fr [space-one-e title-s] 100px [title-e] repeat(5, 80px ) [progress-s] 1fr [progress-e];
+    grid-template-rows: [space-one-s] 1fr [space-one-e] repeat(5, 80px) [progress-s] 1fr [progress-e];
     grid-row-gap: 22px;
-    z-index: -10;
     align-items: center;
     justify-items: center;
 
     align-content: center;
+    align-content: start;
 
     &__title {
-        grid-row: title-s/title-e;
+        position: absolute;
+        top: 154px;
         color: white;
         font-family: 'Alegreya';
         font-size: 20px;
-        text-align: center;
+        font-weight: 300;
         @include border-left;
     }
+
 }

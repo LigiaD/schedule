@@ -35,28 +35,24 @@ class LibraryCourse extends Component {
 
     render() {
         this.id = `library-course-${this.props.id}`;
-        
         return (
-            <div id={this.id} className="library-course">
-                <div className="libary-course__title-check">
-                    <label className="library-course__title">{this.props.title}</label>
-                    {Icon('fas fa-check', 'library-course__icon')}
-                </div>
-                <div className="library-course__line"></div>
-                <Arrow callback={status =>this.handleCallback(status) } id={this.props.id} className="library-course__arrow" />
-                <Action id={this.props.id} onClick={() => this.props.toggleEnrolled(this.props.id)} className="library-course__action" />
-             <AnimateHeight
-                duration={300}
-                height={this.state.height}
-             >
-                <div className="library-course__description">
-                    <label>Course Description</label>
-                    <p>{this.props.description}</p>
-                </div>
-             </AnimateHeight>
-
+          <div id={this.id} className="library-course">
+            <div className="library-course__title-check">
+              <div className="library-course__title">{this.props.title}</div>
+              { this.props.enrolled ? Icon("fas fa-check", "library-course__icon") : ''}
             </div>
-        );
+            <Arrow
+              callback={status => this.handleCallback(status)}
+              id={this.props.id}
+              className="library-course__arrow"
+            />
+            <Action
+              id={this.props.id}
+              onClick={() => this.props.toggleEnrolled(this.props.id)}
+              className={`library-course__action ${this.props.enrolled ? 'action-remove' : ''}`}
+            />
+            </div>
+        )
     }
 }
 
