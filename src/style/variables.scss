@@ -6,3 +6,11 @@ $color-blue: #487BCE;
 $color-gray: #4D4D4D;
 $color-subtle-gray: rgba(255, 255, 255, 0.52);
 $color-subtle-black: #333;
+
+@mixin border-left {
+        border-left: 2px solid $color-subtle-gray;
+        padding-left: 30px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    
+}

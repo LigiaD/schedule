@@ -11,9 +11,8 @@ class ProgressTracker extends Component {
             <div className="progress-tracker">
                 <div className="progress-tracker__title">Progress Tracker</div>
                 <div className="progress-tracker__percentage">
-                 {this.calculateProgress()}%
+                    {this.calculateProgress()}%
                 </div>
-                
             </div>
         )
     }
