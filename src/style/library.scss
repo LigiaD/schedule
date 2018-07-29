@@ -7,7 +7,7 @@
 
     padding-left: 100px;
     padding-top: 100px;
-    margin-right: -50px;
+    grid-row: 1/-1;
 
     &__title {
        color: $color-blue;

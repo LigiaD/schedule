@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 45px 58px;
     grid-template-rows: 32px 1fr;
+
+    z-index: 50;
     
    
     &__line{
@@ -27,7 +29,7 @@
     &__arrow {
         grid-row: 1/2;
         position: absolute;
-        margin-left: 56%;
+        margin-left: 53%;
         margin-top: 23px;
     }
     &__action {
@@ -35,7 +37,7 @@
         transition: all .3s ease;
         grid-row: 1/2;
         position: absolute;
-        margin-left: 59%;
+        margin-left: 56%;
         margin-top: 15px;
     }
     
